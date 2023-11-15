@@ -5,15 +5,24 @@ import java.util.List;
 
 public class AddressBook {
     private List<Address> Details;
-    public AddressBook(){
-        this.Details=new ArrayList<>();
+
+    public AddressBook() {
+        this.Details = new ArrayList<>();
     }
-    public void addDetails(Address address){
+
+    public void addDetails(Address address) {
         Details.add(address);
     }
-    public void removeDetails(Address address){
-        Details.remove(address);
+
+    public void removeDetails(){
+
+
+        System.out.println("Contacts in the Address Book:");
+        for (Address address : Details) {
+            System.out.println(address);
+        }
     }
+
 
 
     public void viewDetails(){
