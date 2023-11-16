@@ -23,6 +23,23 @@ public class AddressBook {
             System.out.println(address);
         }
     }
+    public void addPerson(String fname,String lname,long phonenumber,String mail,long zip,String state){
+        Address address=new Address(fname,lname,phonenumber,mail,zip,state);
+        Details.add(address);
+        System.out.println("person added to address book");
+    }
+    public void  displayAddressBook(){
+        System.out.println("addressbook");
+        for(Address address :Details){
+            System.out.println("fname :"+address.getFname());
+            System.out.println("lname:"+address.getLname());
+            System.out.println("phone:"+address.getPhone());
+            System.out.println("mail:"+address.getMail());
+            System.out.println("zip:"+address.getZip());
+            System.out.println("state:"+address.getState());
+            System.out.println("---------------------------");
+        }
+    }
         public void deletePerson(String fname){
             Iterator<Address> iterator=Details.iterator();
             while(iterator.hasNext()){
