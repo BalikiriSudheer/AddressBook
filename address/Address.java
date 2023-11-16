@@ -19,6 +19,10 @@ public class Address {
 
     }
 
+    public Address(String sudheer) {
+    }
+
+
     public String getFname() {
         return fname;
     }

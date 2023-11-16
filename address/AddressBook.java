@@ -1,6 +1,7 @@
 package com.address;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class AddressBook {
@@ -14,7 +15,7 @@ public class AddressBook {
         Details.add(address);
     }
 
-    public void removeDetails(){
+    public void removeDetails() {
 
 
         System.out.println("Contacts in the Address Book:");
@@ -22,6 +23,21 @@ public class AddressBook {
             System.out.println(address);
         }
     }
+        public void deletePerson(String fname){
+            Iterator<Address> iterator=Details.iterator();
+            while(iterator.hasNext()){
+                Address address=iterator.next();
+                if(address.getFname().equals(fname)){
+                    iterator.remove();
+                    System.out.println(fname+"person deleteed successfully");
+                    return;
+                }
+                System.out.println(fname+"is not found list");
+
+            }
+
+        }
+
 
 
 
