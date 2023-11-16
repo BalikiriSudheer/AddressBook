@@ -28,6 +28,7 @@ public class AddressBook {
         Details.add(address);
         System.out.println("person added to address book");
     }
+
     public void  displayAddressBook(){
         System.out.println("addressbook");
         for(Address address :Details){
